@@ -3,8 +3,9 @@ name = "mcp-server-tuto"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
+    "fastmcp>=3.4.7",
     "ipykernel>=7.3.0",
     "streamlit>=1.61.1",
 ]
