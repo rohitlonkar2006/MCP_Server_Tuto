@@ -8,9 +8,9 @@ def fetch():
     return {"data":"Hello,MCP!"}
 
 @mcp.tool()
-def process():
+def process(path:str):
     """Use This Tool To Process Data from a source"""
-    return {"processed_data":"Data Has Been Processed!"}
+    return {"processed_data":"Data Has Been Processed at path: "+path}
 
 if __name__ == "__main__":
     mcp.run(transport = "stdio")
