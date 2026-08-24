@@ -22,6 +22,10 @@ async def main():
             #Fetch the tools
             tools = await session.list_tools()
             print("Available Tools",tools)
+            
+            #Use Fetch tool
+            result = await session.call_tool("process",arguments={"path":"/path/to/path"})
+            print("Result: ",result)
 
 if __name__ == "__main__":
     asyncio.run(main())
