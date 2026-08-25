@@ -1,0 +1,21 @@
+{
+  "name": "mcp_server_tuto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitlonkar2006/MCP_Server_Tuto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rohitlonkar2006/MCP_Server_Tuto/issues"
+  },
+  "homepage": "https://github.com/rohitlonkar2006/MCP_Server_Tuto#readme"
+}
