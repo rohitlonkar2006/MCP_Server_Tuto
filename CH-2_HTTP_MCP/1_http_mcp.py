@@ -4,12 +4,12 @@ import asyncio
 mcp = FastMCP()
 
 @mcp.tool()
-async def fetch():
+async def fetch_http():
     """Use This Tool To Fetch Data from a source"""
     return {"data":"Hello,MCP!"}
 
 @mcp.tool()
-async def process(path:str):
+async def process_http(path:str):
     """Use This Tool To Process Data from a source"""
     return {"processed_data":"Data Has Been Processed at path: "+path}
 
