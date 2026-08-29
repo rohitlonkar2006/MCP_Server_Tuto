@@ -11,6 +11,10 @@ async def main():
             "transport" : "stdio",
             "command" : r"C:\Users\Samarth\Desktop\MCP_Server_Tuto\.venv\Scripts\python.exe",
             "args" : [r"C:\Users\Samarth\Desktop\MCP_Server_Tuto\CH-1_CreateMCP\1_first_mcp_server_stdio.py"]
+        },
+        "data_fetch_mcp_http":{
+            "transport" : "streamable-http",
+            "url" : "http://localhost:8050/mcp"
         }
     }
     )
