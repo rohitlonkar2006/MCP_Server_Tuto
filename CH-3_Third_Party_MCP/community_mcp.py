@@ -1,7 +1,5 @@
-
 from langchain_mcp_adapters.client import MultiServerMCPClient
 import asyncio
-
 
 {
     "mcpServers": {
@@ -12,7 +10,6 @@ import asyncio
     }
 }
 
-
 async def main():
     
     #Create Instance of The MultiServerMCPClient
@@ -21,8 +18,8 @@ async def main():
     {
         "data_fetch_mcp_stdio":{
             "transport" : "stdio",
-            "command" : r"C:\Users\Samarth\Desktop\MCP_Server_Tuto\.venv\Scripts\python.exe",
-            "args" : [r"C:\Users\Samarth\Desktop\MCP_Server_Tuto\CH-1_CreateMCP\1_first_mcp_server_stdio.py"]
+            "command" : "uvx",
+            "args" : ["duckduckgo-mcp-server"]
         },
         "data_fetch_mcp_http":{
             "transport" : "streamable-http",
@@ -33,7 +30,15 @@ async def main():
     
     #List The Tools
     tools = await client.get_tools()
-    print("Available Tools:",tools)
+    print("Available Tools:",len(tools))
+    
+    for tool in tools:
+        print(tool.name)
+        
+    # result = await client.invoke("search",{"query":"what is the capital of france"})
+    fetch_tool = tools[0]
+    result = await fetch_tool.ainvoke({"query":"What Is The Capital Of France?"})
+    print("Tool Result",result)
     
 if __name__ == "__main__":
     asyncio.run(main())
