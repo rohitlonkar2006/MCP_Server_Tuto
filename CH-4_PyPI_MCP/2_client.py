@@ -1,15 +1,6 @@
 from langchain_mcp_adapters.client import MultiServerMCPClient
 import asyncio
 
-{
-    "mcpServers": {
-        "ddg-search": {
-            "command": "uvx",
-            "args": ["duckduckgo-mcp-server"]
-        }
-    }
-}
-
 async def main():
     
     #Create Instance of The MultiServerMCPClient
