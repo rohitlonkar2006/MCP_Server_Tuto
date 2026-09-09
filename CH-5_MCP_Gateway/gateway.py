@@ -26,7 +26,6 @@ mcp.mount(
     namespace="ddg_mcp"
 )
 
-
 if __name__ == "__main__":
     mcp.run(
         transport="streamable-http",
