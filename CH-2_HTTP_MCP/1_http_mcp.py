@@ -13,5 +13,13 @@ async def process_http(path:str):
     """Use This Tool To Process Data from a source"""
     return {"processed_data":"Data Has Been Processed at path: "+path}
 
+mcp.mount(
+    FastMCP.as_proxy({
+        "mcpServers": {"ddg_mcp":{"command":"uvx","args":["duckduckgo-mcp-server"]},
+                       "agentic_terminal_mcp": {"command":"uvx","args":["agentic_terminal"]}
+                       }
+    })
+)
+
 if __name__ == "__main__":
     mcp.run(transport = "streamable-http",host = "0.0.0.0",port = 8050)
