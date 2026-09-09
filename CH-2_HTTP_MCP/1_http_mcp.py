@@ -15,8 +15,7 @@ async def process_http(path:str):
 
 mcp.mount(
     FastMCP.as_proxy({
-        "mcpServers": {"ddg_mcp":{"command":"uvx","args":["duckduckgo-mcp-server"]},
-                       "agentic_terminal_mcp": {"command":"uvx","args":["agentic_terminal"]}
+        "mcpServers": {"ddg_mcp":{"command":"uvx","args":["duckduckgo-mcp-server"]}
                        }
     })
 )
